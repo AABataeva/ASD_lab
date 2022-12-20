@@ -3,12 +3,12 @@
 
 int main() {
 
- std::stack<char> s_stack;                                // основной стек для работы с данной строкой
+ std::stack<char> s_stack;                                //основной стек для работы с данной строкой
  std::string s_string;
  std::cout << "start:" << std::endl;                                //ввод заданной строки
     std::getline(std::cin,s_string);
 
-    bool flag = false;                                        // флаг наличия хотя бы одной открывающей скобки
+    bool flag = false;                                        //флаг наличия хотя бы одной открывающей скобки
     for(int i = 0; i < s_string.length(); i++){
         char stap = s_string[i];
         if(stap == '(' || stap == '{' || stap == '['){
@@ -21,8 +21,8 @@ int main() {
             else
  modifier = 2;
 
-            if(s_stack.empty() || s_stack.top() != char((int)stap - modifier)){    // проверка стека на пустоту и сравнение стека с текущей скобкой
- std::cout << "0 " << std::endl;                            //вывод на экран "0", если строка не существует
+            if(s_stack.empty() || s_stack.top() != char((int)stap - modifier)){    // проверка стека на пустоту и сравнения стека с текущей скобкой
+ std::cout << "0 " << std::endl;                            // вывод на экран "0", если строка не существует
  stap = 0;
                 break;
  }else{
